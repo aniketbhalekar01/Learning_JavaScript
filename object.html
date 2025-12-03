@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Object in JavaScript</h1>
+
+    <script>
+        let obj = {
+            fname: "Aniket",
+            lname: "Bhalekar",
+            age: 21,
+            email: "aniket@gmail.com",
+            players: ["Dhoni", "Virat", "Rohit", "Surya"],
+            address: {
+                'city': "Patoda",
+                'Country': "India"
+            },
+            phone: 3235466754,
+            msg: "Today im learn javascript object"
+        };
+        document.write("This is " + obj.fname + " my Surname is " + obj.lname + "<br>");
+        document.write("My Email is : " + obj.email + "<br>");
+        document.write("My Age is : " + obj.age + "<br>");
+        document.write("My Fav Player is : " + obj.players[0] + "<br>");
+        document.write("My city is : " + obj.address.city + "<br>");
+
+        document.write("<h2>Employee Object</h2>");
+        let employee = {
+            name: "Mohan Sharma",
+            id: 101,
+            age: 32,
+            salary: 55000,
+            department: "Development",
+            address: {
+                'city': "pune",
+                'pin': 324565,
+                'country': "India"
+            },
+            mob: 898767768,
+            latestProjects: ["E-commerce", "Student Library Management", "Student Attendence"]
+        };
+        document.write("Employee Name : " + employee.name + "<br>");
+        document.write("Employee Salary : " + employee.salary + "<br>");
+        document.write("Employee Latest Project : " + employee.latestProjects[0] + "<br>");
+        document.write("Employee country : " + employee.address.country + "<br>");
+        document.write("<>")
+    </script>
+</body>
+
+</html>

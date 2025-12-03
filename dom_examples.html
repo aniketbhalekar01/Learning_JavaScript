@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        div {
+            height: 300px;
+            width: 600px;
+            border: 1px solid black;
+            margin-top: 40px;
+        }
+        body {
+            transition: background-color 0.5s linear;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <!--Example 1-->
+    <h1>Change Text Using DOM</h1>
+    <h2 id="title">Old Heading</h2>
+    <button onclick="changeText()">change Text</button>
+    <hr>
+    <h1>Chnage Color Using DOM</h1>
+    <h2 id="msg">Hi i am learning Full Stack Development</h2>
+    <button onclick="changeColor()">Change Color</button>
+    <hr>
+    <h1>Change Image Using DOM</h1>
+    <img src="images/dhoni1.webp" alt="" id="myImg">
+    <button onclick="changeImage()">Change Image</button>
+    <hr>
+    <input type="text" placeholder="Enter something" id="inp">
+    <button onclick="showName()">Done</button>
+    <h3 id="output"></h3>
+    <hr>
+    <h1>Remove Element</h1>
+    <p id="del">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. A fugit impedit provident esse dolorem nostrum accusantium velit doloremque non aspernatur numquam sit, odio nulla atque id dolore facilis. Sed, saepe.
+    </p>
+    <button onclick="removeEl()">Remove</button>
+    <hr>
+    <p id="font">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt qui temporibus hic minus nemo incidunt sed porro deserunt nulla, accusantium facere voluptatum tempore maiores ratione eos alias obcaecati voluptatem in?</p>
+    <button onclick="increaseFontSize()">Increase</button>
+    <button onclick="decreaseFontSize()">Decrease</button>
+    <hr>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+    <script>
+        function changeText() {
+            document.getElementById("title").innerText = "New Heading";
+        }
+        function changeColor() {
+            document.getElementById("msg").style.color = "blue";
+        }
+        function changeImage() {
+            document.getElementById("myImg").src = "images/dhoni3.avif";
+        }
+        function showName() {
+            let userInp = document.getElementById("inp").value;
+            document.getElementById("output").innerHTML = userInp;
+        }
+        function removeEl() {
+            document.getElementById("del").remove();
+        }
+        let fSize = 16;
+        function increaseFontSize() {
+            fSize++;
+            document.getElementById("font").style.fontSize = fSize+"px";
+        }
+        function decreaseFontSize() {
+            fSize--;
+            document.getElementById("font").style.fontSize = fSize+"px";
+        }
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
